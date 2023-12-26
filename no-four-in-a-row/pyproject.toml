@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "no-four-in-a-row"
+version = "0.1.0"
+description = ""
+authors = ["Max Stewart <maxstewart0@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+prettytable = "^3.9.0"
+pydantic = "^2.5.3"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.12.1"
+pytest = "^7.4.3"
+mypy = "^1.8.0"
+ruff = "^0.1.9"
+
+[tool.mypy]
+disallow_untyped_defs = true
+no_implicit_optional = true
+
+plugins = ["pydantic.mypy"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
